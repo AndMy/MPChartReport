@@ -4,6 +4,7 @@ MpAndroidChart图表演示，用kotlin，mvvm，viewmodel完成双曲线，单�
 [报表app.apk](https://github.com/AndMy/MPChartReport/tree/master/app/release/报表平台demo.apk)
 
 * 图片可能加载很慢，可下载到本地
+
    ```
    图片可能加载很慢，可下载到本地
    ```
