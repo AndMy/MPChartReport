@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_big_size">18dp</dimen>
+
+    <dimen name="room_status_cell_with">120dp</dimen>
+    <dimen name="room_status_cell_2row_with">230dp</dimen>
+    <dimen name="room_status_cell_hight">50dp</dimen>
+</resources>
