@@ -105,7 +105,7 @@ public class TimeUtlis {
 
         String endDate = sdf.format(calendar1.getTime());
 
-        System.out.println(beginDate+" 到 "+endDate);
+        System.out.println(beginDate+" 到到到 "+endDate);
         return weeks;
     }
     public static GregorianCalendar[]  getBetweenDate(String d1, String d2) throws ParseException

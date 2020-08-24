@@ -16,9 +16,7 @@ import com.hmsg.hospitalreport.utils.TimeUtlis
 import com.hmsg.hospitalreport.utils.immersiveDark
 import com.hmsg.hospitalreport.viewmodel.DialogueReportViewModel
 import kotlinx.android.synthetic.main.include_titlebar_layout.*
-import kotlinx.android.synthetic.main.reply_report_act_layout.excelPanel
-import kotlinx.android.synthetic.main.reply_report_act_layout.line_chart
-import kotlinx.android.synthetic.main.reply_report_act_layout.time_select
+import kotlinx.android.synthetic.main.reply_report_act_layout.*
 
 /**
  * 咨询回复报表
@@ -46,11 +44,12 @@ class ReplyReportActivity : AppCompatActivity(R.layout.reply_report_act_layout) 
             excelBarList.observe(this@ReplyReportActivity, Observer {
                 excelAdapter.setAllData(it.data1,it.data,it.data2)
                 //线图
-                if (!line_chart.isEmpty)line_chart.clear()
+                if (line_chart.data!= null)line_chart.clear()
                 val chartColors = mutableListOf(
                     Color.parseColor("#0097D1")
                     ,Color.parseColor("#FF6184")
                     ,Color.parseColor("#FFA758"))
+                println( " 到到到 " + "数据加载完毕")
                 BarChartHelper.Builder()
                     .setContext(this@ReplyReportActivity)
                     .setBarChart(line_chart)

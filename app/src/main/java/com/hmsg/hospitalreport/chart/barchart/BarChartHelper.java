@@ -231,7 +231,7 @@ public class BarChartHelper {
         mBarChart.getLegend().setEnabled(mLegendEnable);
         //设置标签居中
         xAxis.setCenterAxisLabels(true);
-        xAxis.setLabelCount(4);
+        //xAxis.setLabelCount(4);
         // 是否使用自定义X轴数据
         if (xValueEnable) {
             xAxis.setValueFormatter(new IndexAxisValueFormatter(xValue));
@@ -247,8 +247,9 @@ public class BarChartHelper {
         mBarChart.getXAxis().setAxisMinimum(0);
         mBarChart.getXAxis().setAxisMaximum(mBarChart.getBarData().getGroupWidth(groupSpace, barSpace) * xValue.size() + 0);
         data.groupBars(0, groupSpace, barSpace);
+        mBarChart.setVisibleXRange(0,displayCount);
         // 自定义一页X轴显示多少数据
-        if (displayCount != 0) {
+        /*if (displayCount != 0) {
             //设置动画效果
             Matrix m = new Matrix();
             //两个参数分别是x,y轴的缩放比例。例如：将x轴的数据放大为之前的2倍
@@ -257,7 +258,7 @@ public class BarChartHelper {
             }
             //将图表动画显示之前进行缩放
             mBarChart.getViewPortHandler().refresh(m, mBarChart, false);
-        }
+        }*/
         mBarChart.animateY(durationMillis, mEasing);
         mBarChart.animateX(durationMillis, mEasing);
     }
